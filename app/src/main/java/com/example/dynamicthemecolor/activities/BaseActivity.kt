@@ -28,7 +28,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     private fun initViews() {
         overallLayout.toolbar.setBackgroundColor(Color.parseColor(ThemePreference.getThemeColor(this)))
-        window.statusBarColor = Color.parseColor(ThemePreference.getStatusBarColor(this))
+        window.statusBarColor = Color.parseColor(ThemePreference.getThemeColor(this))
 
         val mCons = Constants()
         mCons.setTextColor(this, overallLayout.toolbar.text_back)

@@ -3,6 +3,9 @@ package com.example.dynamicthemecolor.activities
 import android.content.Intent
 import android.graphics.Color.parseColor
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.Toast
 import com.example.dynamicthemecolor.R
 import com.example.dynamicthemecolor.utils.Constants
 import com.example.dynamicthemecolor.utils.ThemePreference
@@ -26,21 +29,49 @@ class MainActivity : BaseActivity() {
     }
 
     private fun setupEvents(){
+
+        etxtToolBarColr.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                val prefix = "#"
+                val count = s?.toString()?.length ?: 0
+                if (count < prefix.length) {
+                    if (s.toString() != prefix.trim()) {
+                        etxtToolBarColr.setText("$prefix$s")
+                    } else {
+                        etxtToolBarColr.setText(prefix)
+                    }
+                    etxtToolBarColr.setSelection(etxtToolBarColr.length())
+                }
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+        })
+
+
         changeThemeButton.setOnClickListener {
 
-            ThemePreference.setThemeColor(this, etxtToolBarColr.text.toString());
-            ThemePreference.setStatusBarColor(this, etxtStatusBarColr.text.toString())
+//            ThemePreference.setStatusBarColor(this, etxtStatusBarColr.text.toString())
 
-            window.statusBarColor = parseColor(etxtStatusBarColr.text.toString())
-            toolbar.setBackgroundColor(parseColor(etxtToolBarColr.text.toString()))
-            img_sample.setColorFilter(parseColor(etxtToolBarColr.text.toString()))
-            changeThemeButton.setBackgroundColor(parseColor(etxtToolBarColr.text.toString()))
-            replaceFragmentBtn.setBackgroundColor(parseColor(etxtToolBarColr.text.toString()))
+            try {
+                window.statusBarColor = parseColor(etxtToolBarColr.text.toString())
+                toolbar.setBackgroundColor(parseColor(etxtToolBarColr.text.toString()))
+                img_sample.setColorFilter(parseColor(etxtToolBarColr.text.toString()))
+                changeThemeButton.setBackgroundColor(parseColor(etxtToolBarColr.text.toString()))
+                replaceFragmentBtn.setBackgroundColor(parseColor(etxtToolBarColr.text.toString()))
+                ThemePreference.setThemeColor(this, etxtToolBarColr.text.toString());
 
-            val mCons = Constants()
-            mCons.setTextColor(this, overallLayout.toolbar.text_back)
-            mCons.setTextColor(this, overallLayout.toolbar.custom_title)
-            mCons.setTextColor(this, changeThemeButton)
+                val mCons = Constants()
+                mCons.setTextColor(this, overallLayout.toolbar.text_back)
+                mCons.setTextColor(this, overallLayout.toolbar.custom_title)
+                mCons.setTextColor(this, changeThemeButton)
+            }catch (e: Exception){
+                Toast.makeText(this, "Invalid Color Code", Toast.LENGTH_SHORT).show()
+            }
 
 //            val col = parseColor(ThemePreference.getThemeColor(this))
 //            val darkness: Double =

@@ -23,12 +23,12 @@ public class ThemePreference {
 		return getSharedPreferences(ctx).getString(THEME_COLOR, "#123456");
 	}
 
-	public static void setStatusBarColor(Context ctx, String userId) {
-		Editor editor = getSharedPreferences(ctx).edit();
-		editor.putString(STATUS_BAR_COLOR, userId);
-		editor.commit();
-	}
-	public static String getStatusBarColor(Context ctx) {
-		return getSharedPreferences(ctx).getString(STATUS_BAR_COLOR, "#D81B60");
-	}
+//	public static void setStatusBarColor(Context ctx, String userId) {
+//		Editor editor = getSharedPreferences(ctx).edit();
+//		editor.putString(STATUS_BAR_COLOR, userId);
+//		editor.commit();
+//	}
+//	public static String getStatusBarColor(Context ctx) {
+//		return getSharedPreferences(ctx).getString(STATUS_BAR_COLOR, "#D81B60");
+//	}
 }

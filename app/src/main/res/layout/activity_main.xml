@@ -12,15 +12,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Enter the status bar color u want"/>
+        android:hint="Enter the status bar color u want"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the Theme color You like.."
+        android:layout_margin="10dp"/>
 
     <EditText
         android:id="@+id/etxtToolBarColr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="Enter the ToolBar color u want"/>
-
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:maxLength="7"
+        android:text="#"
+        android:digits="0123456789#qwertyuioplkjhgfdsazxcvbnm"
+        />
     <com.example.dynamicthemecolor.widgets.CustomImageView
         android:id="@+id/img_sample"
         android:src="@drawable/ic_android_green_700_24dp"
