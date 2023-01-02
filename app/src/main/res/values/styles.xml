@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--
+            This is a dummy Theme extending from The Default Android Theme
+            This will not be used in this tutorial but would be useful in defining the properties you would
+            want as common in all the themes.
+         -->
+    </style>
+
+    <style name="AppTheme.Teal" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryTeal</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkTeal</item>
+<!--        <item name="colorAccent">@color/colorAccentTeal</item>-->
+    </style>
+    <style name="AppTheme.Cyan" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryCyan</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkCyan</item>
+<!--        <item name="colorAccent">@color/colorAccentCyan</item>-->
+    </style>
+
+</resources>

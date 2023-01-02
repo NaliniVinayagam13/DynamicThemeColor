@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dynamic Theming</string>
+
+    <!-- Placeholder Text for the Activity -->
+    <string name="placeholder">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis culpa cum eaque eligendi ex excepturi illum itaque molestias nam natus obcaecati perferendis ratione recusandae sed, similique vel? Necessitatibus praesentium quae quis tempore. Beatae blanditiis corporis, culpa dolorem ea est inventore maxime necessitatibus obcaecati pariatur porro, quis repudiandae sapiente temporibus voluptatibus. At ducimus, laudantium? Ab ex impedit nulla perspiciatis veritatis?</string>
+    <string name="button_text">Change Theme</string>
+    <string name="content_desc">Sample Image</string>
+</resources>

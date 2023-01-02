@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Teal Theme Colors -->
+    <color name="colorPrimaryTeal">#673AB7</color>
+    <color name="colorPrimaryDarkTeal">#00574B</color>
+    <color name="colorAccentTeal">#D81B60</color>
+
+    <!-- Cyan Theme Colors -->
+    <color name="colorPrimaryCyan">#59F1749E</color>
+    <color name="colorPrimaryDarkCyan">#0095a8</color>
+    <color name="colorAccentCyan">#ffca28</color>
+</resources>

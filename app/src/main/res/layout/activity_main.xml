@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+
+    <EditText
+        android:id="@+id/etxtStatusBarColr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter the status bar color u want"/>
+
+    <EditText
+        android:id="@+id/etxtToolBarColr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter the ToolBar color u want"/>
+
+    <com.example.dynamicthemecolor.widgets.CustomImageView
+        android:id="@+id/img_sample"
+        android:src="@drawable/ic_android_green_700_24dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/size_16"
+        android:layout_width="@dimen/size_164"
+        android:layout_height="@dimen/size_164"
+        android:contentDescription="@string/content_desc" />
+
+    <TextView
+        android:text="@string/placeholder"
+        android:textSize="@dimen/text_14"
+        android:layout_marginLeft="@dimen/size_16"
+        android:layout_marginStart="@dimen/size_16"
+        android:layout_marginRight="@dimen/size_16"
+        android:layout_marginEnd="@dimen/size_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.example.dynamicthemecolor.widgets.CustomButton
+        android:id="@+id/changeThemeButton"
+        android:text="Apply Color"
+        android:textColor="@drawable/text_color_selector"
+        android:layout_margin="@dimen/size_16"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <com.example.dynamicthemecolor.widgets.CustomButton
+        android:id="@+id/replaceFragmentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Replace Fragment"
+        android:textColor="@drawable/text_color_selector"
+        />
+
+</LinearLayout>
