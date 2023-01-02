@@ -52,7 +52,6 @@ class MainActivity : BaseActivity() {
             }
         })
 
-
         changeThemeButton.setOnClickListener {
 
 //            ThemePreference.setStatusBarColor(this, etxtStatusBarColr.text.toString())
